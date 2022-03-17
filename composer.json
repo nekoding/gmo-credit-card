@@ -1,0 +1,55 @@
+{
+    "name": "nekoding/gmo-creditcard",
+    "description": "GMO Payment Gateway Credit Card API Client for Laravel",
+    "keywords": [
+        "nekoding",
+        "gmo-creditcard"
+    ],
+    "homepage": "https://github.com/nekoding/gmo-creditcard",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Enggar Tivandi",
+            "email": "enggartivandi@outlook.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nekoding\\GmoCreditcard\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nekoding\\GmoCreditcard\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Nekoding\\GmoCreditcard\\GmoCreditcardServiceProvider"
+            ],
+            "aliases": {
+                "GmoCreditcard": "Nekoding\\GmoCreditcard\\GmoCreditcardFacade"
+            }
+        }
+    }
+}
