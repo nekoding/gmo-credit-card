@@ -15,7 +15,7 @@ class GMOErrorResponseException extends Exception
         return parent::__construct($message);
     }
 
-    public function getErrors()
+    public function getErrorResponse()
     {
         return $this->errors;
     }

@@ -24,7 +24,7 @@ trait HttpClient
 
     public function getBaseUrl(): string
     {
-        return config('gmo.mode') == 'production' ? config('gmo.base_url.production') : config('gmo.base_url.development');
+        return config('gmo-creditcard.gmo.mode') == 'production' ? config('gmo.base_url.production') : config('gmo.base_url.development');
     }
 
     public function setupHeader(): array

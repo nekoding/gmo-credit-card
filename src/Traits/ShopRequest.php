@@ -12,10 +12,9 @@ trait ShopRequest
      */
     public function getData(array $data): array
     {
-        return [
+        return array_merge([
             'ShopID'    => config('gmo.creds.shop_id'),
             'ShopPass'  => config('gmo.creds.shop_pass'),
-            ...$data
-        ];
+        ], $data);
     }
 }

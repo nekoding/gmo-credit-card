@@ -18,6 +18,9 @@ composer require nekoding/gmo-creditcard
 
 ```php
 
+// publish configuration file
+php artisan vendor:publish --provider="Nekoding\GmoCreditcard\GmoCreditcardServiceProvider"
+
 // setting GMO Configuration via ENV
 
 // you can call site or shop api like this

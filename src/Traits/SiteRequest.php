@@ -12,10 +12,9 @@ trait SiteRequest
      */
     public function getData(array $data): array
     {
-        return [
+        return array_merge([
             'SiteID'    => config('gmo.creds.site_id'),
             'SitePass'  => config('gmo.creds.site_pass'),
-            ...$data
-        ];
+        ], $data);
     }
 }

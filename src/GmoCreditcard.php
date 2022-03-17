@@ -31,11 +31,11 @@ class GmoCreditcard
      */
     public function useShopApi()
     {
-        if (config('gmo.security.use3ds') && config('gmo.security.version') == 1) {
+        if (config('gmo-creditcard.gmo.security.use3ds') && config('gmo-creditcard.gmo.security.version') == 1) {
             return new ShopApiWith3DS1();
         }
 
-        if (!config('gmo.security.use3ds') && config('gmo.security.version') == 2) {
+        if (!config('gmo-creditcard.gmo.security.use3ds') && config('gmo-creditcard.gmo.security.version') == 2) {
             return new ShopApiWith3DS2();
         }
 
